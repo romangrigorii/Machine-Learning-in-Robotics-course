@@ -1,0 +1,109 @@
+=== Run information ===
+
+Scheme:weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     data
+Instances:    1000
+Attributes:   49
+              Alex
+              Nancy
+              Howard
+              Roman
+              Lucy
+              Dean
+              Zack
+              Matthew
+              Greg
+              Antonio
+              Elena
+              Peter
+              Jake
+              Pat
+              Connor
+              John
+              Forest
+              Nash
+              Lennon
+              Clyde
+              Coby
+              Daren
+              Clark
+              Bret
+              Fabian
+              Enrique,
+              Ernesto
+              Dino
+              Marco
+              Luke
+              Ned
+              Leonard
+              Valentin
+              Tray
+              Rock
+              Ryle
+              Paul
+              Richie
+              Paco
+              Percy
+              Rio
+              Jax
+              Lisa
+              Margo
+              Claire
+              Gale
+              Olga
+              Natalie
+              game outcome
+Test mode:10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+Alex <= 0: lose (479.0)
+Alex > 0
+|   Howard <= 0
+|   |   Nancy <= 0
+|   |   |   Lucy <= 0: lose (68.0)
+|   |   |   Lucy > 0
+|   |   |   |   Roman <= 0: lose (19.0)
+|   |   |   |   Roman > 0
+|   |   |   |   |   Zack <= 0
+|   |   |   |   |   |   Dean <= 0: lose (11.0)
+|   |   |   |   |   |   Dean > 0: win (4.0)
+|   |   |   |   |   Zack > 0: win (18.0)
+|   |   Nancy > 0: win (125.0/8.0)
+|   Howard > 0: win (276.0/12.0)
+
+Number of Leaves  : 	8
+
+Size of the tree : 	15
+
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         980               98      %
+Incorrectly Classified Instances        20                2      %
+Kappa statistic                          0.9588
+Mean absolute error                      0.0381
+Root mean squared error                  0.1383
+Relative absolute error                  7.9166 %
+Root relative squared error             28.2018 %
+Total Number of Instances             1000     
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.966     0          1         0.966     0.983      0.982    lose
+                 1         0.034      0.953     1         0.976      0.982    win
+Weighted Avg.    0.98      0.014      0.981     0.98      0.98       0.982
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 577  20 |   a = lose
+   0 403 |   b = win
+

@@ -1,0 +1,158 @@
+=== Run information ===
+
+Scheme:weka.classifiers.bayes.NaiveBayes 
+Relation:     data2
+Instances:    1000
+Attributes:   17
+              Alex
+              Nancy
+              Howard
+              Roman
+              Lucy
+              Dean
+              Zack
+              Matthew
+              Greg
+              Antonio
+              Elena
+              Peter
+              Jake
+              Pat
+              Connor
+              John
+              game outcome
+Test mode:10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                Class
+Attribute        lose    win
+               (0.47) (0.53)
+=============================
+Alex
+  mean          0.5105 0.5494
+  std. dev.     0.4999 0.4976
+  weight sum       474    526
+  precision          1      1
+
+Nancy
+  mean          0.4578 0.4905
+  std. dev.     0.4982 0.4999
+  weight sum       474    526
+  precision          1      1
+
+Howard
+  mean          0.5063 0.4791
+  std. dev.        0.5 0.4996
+  weight sum       474    526
+  precision          1      1
+
+Roman
+  mean          0.4557 0.5114
+  std. dev.      0.498 0.4999
+  weight sum       474    526
+  precision          1      1
+
+Lucy
+  mean          0.5084 0.5019
+  std. dev.     0.4999    0.5
+  weight sum       474    526
+  precision          1      1
+
+Dean
+  mean          0.4916 0.5076
+  std. dev.     0.4999 0.4999
+  weight sum       474    526
+  precision          1      1
+
+Zack
+  mean           0.481 0.5209
+  std. dev.     0.4996 0.4996
+  weight sum       474    526
+  precision          1      1
+
+Matthew
+  mean          0.5063  0.538
+  std. dev.        0.5 0.4986
+  weight sum       474    526
+  precision          1      1
+
+Greg
+  mean          0.5169 0.4791
+  std. dev.     0.4997 0.4996
+  weight sum       474    526
+  precision          1      1
+
+Antonio
+  mean          0.4852 0.4886
+  std. dev.     0.4998 0.4999
+  weight sum       474    526
+  precision          1      1
+
+Elena
+  mean          0.5401 0.4791
+  std. dev.     0.4984 0.4996
+  weight sum       474    526
+  precision          1      1
+
+Peter
+  mean          0.5105 0.4867
+  std. dev.     0.4999 0.4998
+  weight sum       474    526
+  precision          1      1
+
+Jake
+  mean          0.5232 0.4677
+  std. dev.     0.4995  0.499
+  weight sum       474    526
+  precision          1      1
+
+Pat
+  mean          0.5232 0.5133
+  std. dev.     0.4995 0.4998
+  weight sum       474    526
+  precision          1      1
+
+Connor
+  mean          0.4578 0.4867
+  std. dev.     0.4982 0.4998
+  weight sum       474    526
+  precision          1      1
+
+John
+  mean          0.5021 0.4886
+  std. dev.        0.5 0.4999
+  weight sum       474    526
+  precision          1      1
+
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         527               52.7    %
+Incorrectly Classified Instances       473               47.3    %
+Kappa statistic                          0.0348
+Mean absolute error                      0.4977
+Root mean squared error                  0.5011
+Relative absolute error                 99.8138 %
+Root relative squared error            100.3481 %
+Total Number of Instances             1000     
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.327     0.293      0.502     0.327     0.396      0.508    lose
+                 0.707     0.673      0.538     0.707     0.611      0.508    win
+Weighted Avg.    0.527     0.493      0.521     0.527     0.509      0.508
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 155 319 |   a = lose
+ 154 372 |   b = win
+

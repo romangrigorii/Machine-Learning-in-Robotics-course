@@ -1,0 +1,102 @@
+Roman Grigorii
+Homework Set 1
+
+Q1. 
+
+Fixed acidity has a few outliers at the high acidity content, and so does volatile acidity. Citric acid has an outlier as
+at the high end. Free sulfur dioxide and Total sulfur dioxide have some outliers at the high end as well. Finally, chlrides level has
+some outliers, arguably more than other attributes. 
+
+Q2.
+
+The accuracy is 62.381% . ZeroR predicts the class value 'bad', so from the data given 62.381% of it has been
+classified as the class value it was set to look for. In other words, 62.381 = (# of 'bad' instances / size of data set) * 100
+Knowing this number we can get other clasifiers to match it as closely as possible. That is, we want our algorithm
+to give the same classification accuracy on it's test set, as it learned from the learning set, since the selection of
+the data points in the two sets was random and should thus be equal in the limit of infinite data points in each set.
+
+Q3.
+
+It appears that alcohol content was the most influential feature. First of all, it is a feature that performs the first split on the data, thus making
+all the model decisions toward the tree building made in aftermath are based on the initial caracterization based on the alcohol. Also,
+scrollling all the way down the tree, one can see that a lot of wines (223/234) that have above 12% alcohol are rated as good. Based on this characterisitc alone,
+the algorithm can guess the quality of wine with 95.3% accuracy. The alcohol feature is thus important, because it removes more than 12.3% of data by
+making the prediction that the wine of alcoholic content above 12 is "good". The algorithm chose alcohol to be the main feature, most likely because
+it characterized the most of the intitial data set.
+
+The relationship between the feature is hence that wine with alcoholic content above 12% is good. The classification for wine below 12% alcoholic content, will
+depend on other attributes. 
+
+Q4.
+
+Before 10 fold validation enabled:
+
+Correctly Classified Instances        1812               95.873  %
+Incorrectly Classified Instances        78                4.127  %
+
+After 10 fold validation enabled:
+
+Correctly Classified Instances        1625               85.9788 %
+Incorrectly Classified Instances       265               14.0212 %
+
+10-fold-cross validation is using 10% of data for validation and 90% for training our algorithm, then retraining the
+algorithm using that 10% that we previously used for validation as training data and the 80% of the data we previously
+used for training as the new training set and the rest of the data as validation set. We can effectively do this 10 times,
+and combine the estimates of prediction error.
+
+When one measures the accuracy on the training set, what we are seeing is how well the model can predict the data it
+was trained on. If the model was over-fitted, the accuracy would be closer to 100%. But since there is pruning taking place, it is closer to 96%.
+All this number tells us, then, is how much of the instances have been accounted for after pruning, and nothing about how well 
+this model predicts output for data that it has not been trained on. Accuracy test through cross validation technique is 
+lower since it includes the pruning, but MAINLY it is lower because the validation that is done is with data that was not 
+used to train the model unlike before where the validation was done with the training data.
+
+Cross validation is important because it gives us a good quality estimate of the model before we run it on test data. 
+
+Q5.
+
+I am using RandomForest -I 100 -K 0 -S 1
+
+Correctly Classified Instances        1716               90.7937 %
+Incorrectly Classified Instances       174                9.2063 %
+
+Report accuracy is 90.7937%
+
+Q6.
+
+I chose the model that increased my accuracy the most without making the computational time extremely long. I used a 10-fold
+cross validation with this model, and a 100-fold validation which gave an increase in accuracy by 1%. I decided that
+this was not a great option, however, because the computational time exceeded the standard time of patience while
+waiting for a code to finish running. I think that RandomForest was a great model, because it built a very accurate algorithm.
+Besides the fold parameter, I varied numTress parameter and the seed paramter, both of which did not yield better accuracy
+than their default setting of 100 and 1 respetively.
+
+Q7.
+
+I both agree and disagree. I think that while we can build models that can replace much of decision making made by human professionals,
+it is questionable whether accurate decision making can be made as quickly as it can by a human. No model can encompass all the important feautures of 
+what it is trying to model, without sacraficing computational time. On the other hand, models are unbiased, and can make a decision based on facts that
+exclude any emotional attachement to the topic at hand. This can be great, but is obviously not the best option in some of the situations that
+may require intuition. For example modeling could work in diagnosis, but certainly should not be used for treatment in the case of a counselor or therapist. 
+Every patient is different, and needs a different approach. So while in some cases machine learning can replace a human at making a decision, 
+it would not be able to completely replace whole professions, especially ones that deal with people.
+
+Q8.
+
+Classifier A = Decision Stump (good for car data bad for wine data)
+Classifier B = FT (good for wine data bad for car data)
+
+Result: (94.27 - 84.8148) + (80.8466 - 70.5) ~ 20%
+
+I think the varience in accuracy for different algorithms arises from the fact that the two data sets have different
+number of classes and attributes - car data has more classes but less attributes. This is also not the best scenario for
+comparing the two data sets, because they are of different size.  However, I reduced the ein data set to match the
+number of entries there are for the cars, and found that this margin of 20% actually grew to about 30%. This makes me believe that 
+the variance is inherent in the type of data the two sets hold. The data for the cars is more discretized, and thus can have models built
+based on classyfication techniques, versus te wine data that contains numeric data that would require regression method.
+
+
+Q9.
+
+The output space of the wine data is composed of binary (yes/no, good/bad), whereas the output space for the car data is a
+range of levels of satisfaction which means there is more playroom in decision making based on the data.
