@@ -1,6 +1,0 @@
-C:\Program Files (x86)\Microchip\xc8	 			   | <xc32dir>
-C:\microchip\harmony					   | <harmony>
-C:\Users\Roman\Desktop\333\source_code\PIC32Quickstart  	   | <PIC32>
-C:\Users\Roman\Desktop\333 				   | <puttyPath>
-C:\Users\Roman\Desktop\333\putty.exe				   | <termEmu>
-v1_06_02							   | <harmVer>
